@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailspatch - Email Testing Tool</title>
+</head>
+<style>
+    *{
+        font-family: Segoe UI;
+        color: #213b56;
+    }
+    p{
+        margin: 5px;
+    }
+    #lightbody{
+        background-color: #f8f3f3;
+        height: 2300px;
+    }
+    body{
+        background-color: #f4eaea;
+        margin: 0%;
+    }
+    #nav{
+        position:fixed;
+        top: 0%;
+        display: flex;
+        justify-content: space-around;
+        height: 30px;
+        width: 100%;
+        margin-top: 0px;
+        background-color: #f5f1f1;;
+        padding: 20px 0px 20px 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
+    }
+
+    #nav2part{
+        display: flex;
+        justify-content: space-around;
+        width:700px;
+    }
+
+    .page{
+        display: inline;
+        text-decoration: none;
+        color: #243F5c;
+        font-weight: bolder;
+    }
+
+.dropdown .dropbtn {
+  border: none;
+  font-size: 14.5px;  
+  font-weight: bolder;
+  color: #243F5c;
+  background-color: inherit;
+}
+    .dropdown-content {
+  background-color: white;
+  display: none;
+  position: absolute;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+    .dropdown-content a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  display: block;
+  font-size: 14.5px;
+}
+#last{
+    padding-bottom: 20px;
+}
+    .dropdown-content a:hover {
+  color: #22d172;
+}
+#first{
+    padding-top: 20px;
+}
+
+    .dropdown:hover .dropdown-content {
+  display: block;
+    }
+    #seconddropimg{
+        width:40px;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .page:hover{
+        color: #46668b;
+    }
+    .page{
+        font-size: 14.5px; 
+    }
+    #text{
+        display: flex;
+    }
+    #buttons{
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #whitebtn{
+        border: none;
+        border: 1px solid black;
+        border-radius: 6px;
+        background-color: inherit;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+    }
+    #greenbtn{
+        border: none;
+        border-radius: 6px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+    #body_Section{
+        text-align: center;
+    }
+    #body_Section > h1{
+        font-size: 40px;
+        margin: 140px 0px 60px 0px;
+    }
+    #greenbodybtn{
+        border: none;
+        height: 40px;
+        border-radius: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+
+    #banner{
+        width: 700px;
+        margin: auto;
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #banner_img{
+        height: 35px;
+    }
+
+    #video{
+        width: 1000px;
+        display: block;
+        margin: auto;
+        margin-top: 60px;
+    }
+    /* video */
+
+    #bodyh1{
+        padding-top: 50px;
+        width: 500px;
+        text-align: center;
+        margin: auto;
+    }
+    /* First Grid Starts */
+    #firstGrid{
+        width: 900px;
+        display: grid;
+        margin: auto;
+        margin-top: 50px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        row-gap: 40px;
+    }
+    #firstGridDiv{
+        display: flex;
+        gap: 15px;
+    }
+    #iconDiv{
+        /* border: 1px solid black; */
+        width: 150px;
+    }
+    #iconDiv > img{
+        margin-top: 20px;
+        width: 75px;
+    }
+    /* First Grid Ends */
+
+    /* Sand Box */
+    #aboveSandBox{
+        margin-top: 90px;
+    }
+    #aboveSandBox > h1,
+    #aboveSandBox > p{
+        text-align: center;
+    }
+    #sandboxDiv{
+        /* border: 1px solid black; */
+        width: 900px;
+        margin: auto;
+        /* margin-top: 25px; */
+        display: flex;
+    }
+    #sandboxDiv > div{
+        width: 50%;
+    }
+    #sandboxDivimgDiv > img{
+        width: 100%;
+    }
+
+    #sandboxPointTextLine{
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+    }
+    #sandboxPointTextLine h3{
+        margin: 3px;
+    }
+    #sandboxPointTextLine img{
+        width: 50px;
+    }
+    /* Sand Box */
+
+    /* <!-- body Section --> */
+    #headingDiv{
+        width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    /* NOTE IT */
+    #picture{
+        width:900px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    #picture > img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #pictureText ul li::before{
+        color: #22d172;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    ul li::before{
+        content: "• ";
+        color: #22d172;
+    }
+    li{
+        margin: 25px 0px;
+    }
+    #pictureText{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 18px;
+    }
+
+    /* Client */
+    #clientDiv{
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    #clientDiv > h1{
+        text-align: center;
+    }
+    #inline,
+    #endDate{
+        font-weight: 100;
+    }
+    #endDate{
+        margin-top: 10px;
+    }
+    #inline{
+        display: inline;
+    }
+    #clientDiv{
+        background-color: #f5f8f3;
+        margin-bottom: -40px;
+    }
+    #insideClientDiv{
+        display:flex;
+        width:1000px;
+        margin: auto;
+        margin-top: 75px;
+        gap: 25px;
+        align-items: center;
+    }
+    #insideClientDiv > button{
+        background-color: white;
+        border: none;
+        display: block;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        font-weight:900;
+    }
+    #clientCard{
+        background-color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 40%;
+        border-radius: 10px;
+        min-height: 300px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #clientCard > img{
+        width: 50px;
+        margin-bottom: 10px;
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+    #clientCard h3{
+        display: inline;
+    }
+    #clientCard a{
+        text-decoration: none;
+    }
+
+    /* Trusted Section */
+    #trusted{
+        background-color: #fdf9f9;
+        height: 350px;
+    }
+    #trusted > h1{
+        text-align: center;
+        padding-top: 100px;
+    }
+    #FAQ{
+        margin: 75px 0px;
+        background-color: #f5f8f3;
+        margin-top: -50px;
+        padding-bottom: 50px;
+    }
+    #FAQ > h1{
+        text-align: center;
+        margin-bottom: 75px;
+    }
+    #FAQGrid{
+        width:800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    #FAQGrid > div{
+        background-color: white;
+        border-radius: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 40px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #FAQGrid > div > img{
+        width: 50px;
+        position: relative;
+        top: -10px;
+    }
+    /* Footer */
+    #footerbanner{
+        margin-top: -73px;
+        background-color: #1a2e44;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #click{
+        /* border: 1px solid black; */
+        height: 150px;
+        width: 40%;
+        margin-left: 250px;
+    }
+    #click > h3,
+    #click > h1{
+        margin: 0%;
+        color: white;
+    }
+    #click > h1{
+        font-size:50px;
+    }
+    #footerbannerimgDiv{
+        /* border: 1px solid black; */
+        height: 350px;
+        width: 40%;
+    }
+    #footerbannerimgDiv > img{
+        width: -520px;
+        height: 425px;
+    }
+    #greenbodybtnclick{
+        border: none;
+        height: 40px;
+        border-radius: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        margin-top: 20px;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+    #footer{
+        background-color: #f8f3f3;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    #footer > div,
+    #footer div:nth-child(1){
+        /* border: 1px solid black; */
+        width: 200px;
+    }
+    #footer div:nth-child(1) > img{
+        margin-top: 30px;
+        width: 100px;
+    }
+    #footer div:nth-child(4) img{
+        width: 50px;
+    }
+    #footer div:nth-child(4) > div{
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+    }
+    #footer img:hover
+    {
+        border: 1px solid #22d172;
+    }
+    #footer a{
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #footer a:hover{
+        color: #22d172;
+    }
+    
+    /* Footer End */
+    #greenbodybtnclick:hover,
+    #greenbodybtn:hover,
+    #greenbtn:hover{
+        background-color: #3fe78a;
+    }
+
+    /* Media */
+    @media screen and (max-width:800px){
+        #banner{
+            padding-right: 100px;
+            width: 400px;
+        }
+        #banner_img{
+            height: 30px;
+        }
+    }
+
+    /* Media */
+</style>
+<body>
+    <nav id="nav">
+        <img id="logo" src="https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1670993669" alt="Mailspatch_logo">
+
+<div id="nav2part">
+    <!--  -->
+    <div class="dropdown">
+        <button class="dropbtn">Email Testing ∨</button>
+        <div class="dropdown-content">
+            <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/qa_automation_icon_menu.svg" alt="logo">
+                <div id="first">
+                    <p class="bold">QA Automation</p>
+                    <p>Automation for Email Testing</p>
+                </div>
+                </a>
+                <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/check_html_icon_menu.svg" alt="logo">
+                    <div>
+                        <p class="bold">HTML Check</p>
+                        <p>Find HTML/CSS issues</p>
+                    </div>
+                    </a>
+                    <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/fake_smtp_server_icon_menu.svg" alt="logo">
+                        <div>
+                            <p class="bold">Fake SMTP Server</p>
+                            <p>Your own SMTP server</p>
+                        </div>
+                        </a>
+                        <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/api_icon_menu.svg" alt="logo">
+                            <div id="last">
+                <p class="bold">Sandbox API</p>
+                <p>Integrate with your application</p>
+                            </div>
+                            </a>
+          </div>
+    </div>
+
+
+    <a class="page" href="#">Email API</a>
+    <a class="page" href="#">Pricing</a>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Resources ∨</button>
+        <div class="dropdown-content">
+            <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-09.svg" alt="logo">
+                <div id="first">
+                    <p class="bold">API</p>
+                    <p>Integrate with existing resources</p>
+                </div>
+                </a>
+                <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-08.svg" alt="logo">
+                    <div>
+                        <p class="bold">Case Studies</p>
+                        <p>Success stories of our customers</p>
+                    </div>
+                    </a>
+                    <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-07.svg" alt="logo">
+                        <div>
+                            <p class="bold">Blog</p>
+                            <p>The best content about emails</p>
+                        </div>
+                        </a>
+                        <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/03/Transactional-Email-Sending_icon-06.svg" alt="logo">
+                            <div id="last">
+                <p class="bold">Help</p>
+                <p>How-to's and Knowledge base</p>
+                            </div>
+                            </a>
+          </div>
+    </div>
+    <!--  -->
+    <div id="buttons">
+        <button id="whitebtn">
+            Log In
+        </button>
+        <button id="greenbtn">
+            Sign Up
+        </button>
+    </div>
+</div>
+        
+
+<!--  -->
+    </nav>
+    
+    <!-- body Section -->
+    
+    <div id="body_Section">
+        <h1>Email Sandbox</h1>
+        <h3>Capture SMTP traffic from staging and dev environments</h3> 
+        <h3>Automate test flows and scenarios with flexible API</h3>  
+        <h3>Analyze email content for spam score and validate HTML/CSS</h3>
+        <button id="greenbodybtn">
+            Sign Up For Free
+        </button> 
+    </div>
+
+<!-- Banner -->
+    <div id="banner">
+        <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Rails.svg" alt="banner">
+        <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Python.svg" alt="banner">
+        <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/NET.svg" alt="banner">
+        <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Symfony.svg" alt="banner">
+        <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Laravel.svg" alt="banner">
+    </div>
+<!-- Banner -->
+<!-- Video -->
+    <a href="https://www.youtube.com/watch?v=HTZeYkKtiok">
+        <img id="video" src="https://i.ibb.co/qMxcT8B/pic.jpg" alt="video">
+    </a>
+<!-- Video -->
+
+<!-- After Video -->
+    <div id="lightbody">
+        <h1 id="bodyh1">Email testing challenges that Mailspatch Sandbox solves</h1>
+
+<!-- First Grid -->
+
+<div id="firstGrid">
+    <!--  -->
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/03/icon4.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Configure your testing environment in 5 minutes</h3>
+            <p>Each account comes with an individual testing environment. Integrate it with your app in just a few clicks.</p>
+        </div>
+    </div>
+    <!--  -->
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/03/icon__mail.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Keep all testing data organized in one place</h3>
+            <p>Create individual inboxes for different environments or review servers and group them into relevant projects.</p>
+        </div>
+    </div>
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/01/icon_work.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Quickly integrate with Sandbox API</h3>
+            <p>Get started quickly with our well-documented API and configure automated testing with unlimited API calls.</p>
+        </div>
+    </div>
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/03/icon2.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Dig into both the content and source of your emails</h3>
+            <p>View messages, check spam scores, validate headers, analyze the HTML support across email clients, and more.</p>
+        </div>
+    </div>
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/01/icon_men.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Easily share test emails with your team</h3>
+            <p>Manage access to your inboxes for colleagues or clients. Send selected test emails to whitelisted real recipients.</p>
+        </div>
+    </div>
+    <div id="firstGridDiv">
+        <div id="iconDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/03/ivon__performance.svg" alt="icon">
+        </div>
+        <div id="textDiv">
+            <h3>Test your email sending service</h3>
+            <p>Send emails to Mailspatch Email Sandbox directly from your CRM or email sending service. Simulate sending to multiple recipients.</p>
+        </div>
+    </div>
+    <!--  -->
+</div>
+<!-- First Grid Ends -->
+
+<div id="aboveSandBox">
+    <h1>Setup takes less than 5 minutes</h1>
+    <p>Mailspatch Sandbox is compatible with any app or framework that supports SMTP</p>
+    <!-- Start of Sandbox Div Outside -->
+    <div id="sandboxDiv">
+        <div id="sandboxDivimgDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/03/setup-final-700x502.png" alt="image">
+        </div>
+        <!-- sandboxPointText Div -->
+        <div id="sandboxPointTextSide">
+            <!-- Starts Points -->
+            <div id="sandboxPointTextLine">
+                <div>
+                    <img src="https://i.ibb.co/n7gHYBK/1.jpg" alt="icon">
+                </div>
+                <div>
+                    <h3>Select your integration from 20+ code samples or copy SMTP credentials</h3>
+                </div>
+            </div>
+            <!--  -->
+            <div id="sandboxPointTextLine">
+                <div>
+                    <img src="https://i.ibb.co/thWSXR6/2.jpg" alt="icon">
+                </div>
+                <div>
+                    <h3>Paste the configuration to your project</h3>
+                </div>
+            </div>
+            <div id="sandboxPointTextLine">
+                <div>
+                    <img src="https://i.ibb.co/ftm7M7V/3.jpg" alt="icon">
+                </div>
+                <div>
+                    <h3>Run your email sending code</h3>
+                </div>
+            </div>
+            <div id="sandboxPointTextLine">
+                <div>
+                    <img src="https://i.ibb.co/86ChGKN/4.jpg" alt="icon">
+                </div>
+                <div>
+                    <h3>Instantly receive a message in your Sandbox inbox</h3>
+                </div>
+            </div>
+
+            <!-- End Points -->
+        </div>
+    </div>
+    <!-- End of Sandbox Div Outside -->
+</div>
+<div id="headingDiv">
+    <h1>How different teams use Email Sandbox</h1>
+</div>
+<!-- NOTE IT -->
+<div id="picture">
+    <img src="https://mailtrap.io/wp-content/uploads/2021/03/img_team.svg" alt="image">
+    <div id="pictureText">
+        <div>
+            <h3>Developers</h3>
+            <ul>
+                <li>Experiment with the email sending functionality</li>
+                <li>Cover code with tests to run automated checks via Sandbox API</li>
+                <li>Verify different email aspects, debug sending script and HTML template</li>
+            </ul>
+        </div>
+        <!--  -->
+        <div>
+            <h3>QAs</h3>
+            <ul>
+                <li>Run safe email tests in staging and/or testing environment</li>
+                <li>Integrate Sandbox API with automated testing tools</li>
+                <li>Compare revised emails with their previous versions</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Marketers and managers</h3>
+            <ul>
+                <li>Smoothly collaborate with development and QA teams</li>
+                <li>View test emails in shared inboxes or forward to recipients</li>
+                <li>Send emails to Sandbox inboxes from CRMs and common sending tools</li>
+            </ul>
+        </div>
+
+    </div>  
+      <!-- PictureText -->
+</div>
+
+<div id="body_Section">
+    <button id="greenbodybtn">
+        Sign Up For Free
+    </button> 
+</div>
+<!--  -->
+    </div>
+    <!-- End of first light body section -->
+    <div id="clientDiv">
+        <h1>From our #BestClientEver</h1>
+        <div id="insideClientDiv">
+            <button><</button>
+            <div id="clientCard">
+                <img src="https://i.ibb.co/CHkG7RG/bird.jpg" alt="icon">
+                <h3>Mr. Glass</h3>
+                <a id="inline" href="https://twitter.com/MisterGlass">@MisterGlass</a>
+                <p>Shout out to @Mailspatch, hands down the best way to handle mail sending in local/test environments.</p>
+                <p id="endDate"> 11:43 PM – May 21, 2020 </p>
+            </div>
+            <div id="clientCard">
+                <img src="https://i.ibb.co/CHkG7RG/bird.jpg" alt="icon">
+                <h3>Rado Georgiev</h3>
+                <a id="inline" href="https://twitter.com/Rado_g">@Rado_g</a>
+                <p>One thing we started using recently is @Mailspatch for our dev & staging environments. We were previously either turning email sending entirely off for staging or running SES + whitelist. Turns out, having a fake SMTP mailbox is great and you can test better with it.
+                </p>
+                <p id="endDate">
+                    1:32 PM – Jan 06, 2021                                </p>
+            </div>
+            <button>></button>
+        </div>
+    </div>
+
+</div>
+    <!-- End Client Section -->
+
+    <!-- Trusted -->
+    <div id="trusted">
+        <h1>Trusted by 150,000+ monthly active users</h1>
+<!-- Banner -->
+<div id="banner">
+    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Adobe.svg" alt="banner">
+    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Atlassian.svg" alt="banner">
+    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Calendly.svg" alt="banner">
+    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Yelp.svg" alt="banner">
+    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/UserTesting.svg" alt="banner">
+</div>
+<!--  -->
+    </div>
+    <!-- End Trusted -->
+    <div id="FAQ">
+        <h1>Frequently Asked Questions</h1>
+        <div id="FAQGrid">
+            <!--  -->
+            <div id="FAQGridBox">
+                <img src="https://i.ibb.co/XDCWwqv/Q.jpg" alt="icon">
+                <h3>Can Email Sandbox send emails to real recipients inboxes?</h3>
+                <p>Email Sandbox is a testing tool and is not designed to deliver emails to real email addresses. But you can use our Email API or SMTP Service to send emails to your recipients.</p>
+            </div>
+            <!--  -->
+            <div id="FAQGridBox">
+                <img src="https://i.ibb.co/XDCWwqv/Q.jpg" alt="icon">
+                <h3>How can I preview my email in different email clients?</h3>
+                <p>HTML Check analyzes your template for support with popular email clients and explains how to fix errors right away. This is more efficient than manual comparison of previews from email clients, but you still can forward your test emails to real recipients and open them in specific email clients.</p>
+            </div>
+            <div id="FAQGridBox">
+                <img src="https://i.ibb.co/XDCWwqv/Q.jpg" alt="icon">
+                <h3>Can I send a test email to Sandbox from my Gmail?</h3>
+                <p>Yes, you can! On Business, Premium, and Enterprise plans, there is a separate email address available for each of your inboxes. With it, you can send messages from any CRM, email sending app or client, such as Gmail, Hubspot, Sendgrid, etc.</p>
+            </div>
+            <div id="FAQGridBox">
+                <img src="https://i.ibb.co/XDCWwqv/Q.jpg" alt="icon">
+                <h3>How much does Email Sandbox cost?</h3>
+                <p>Mailspatch features a forever free plan that offers the basic functionality for personal use of Email Sandbox. Paid plans start from $9.99 per month, and are suitable for companies of different sizes. View the Mailspatch pricing for more details.</p>
+            </div>
+            <!--  -->
+        </div>
+        <!--  -->
+    </div>
+    <!-- End Trusted -->
+
+    <!-- body Section End-->
+    
+    <!-- Footer Section Start -->
+    <div id="footerbanner">
+        <div id="click">
+            <h3>Create Your Free Account</h3>
+            <h1>In 3 Clicks</h1>
+            <button id="greenbodybtnclick">
+                Sign Up Now
+            </button>
+        </div>
+        <div id="footerbannerimgDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/01/img__cta.svg" alt="image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footer">
+        <div>
+            <img src="https://i.ibb.co/N7nSjk3/flogo.jpg" alt="footerimage">
+        </div>
+        <div>
+            <h3>Mailtrap</h3>
+            <a href="#">Pricing</a>
+            <a href="#">Changelog</a>
+            <a href="#">Status</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Navigational Information</a>
+        </div>
+        <div>
+            <h3>Railsware Experience</h3>
+            <a href="#">Mailtrap Blog</a>
+            <a href="#">Coupler.io</a>
+            <a href="#">Smart Checklist for Jira</a>
+            <a href="#">Careers – Railsware Hiring</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <a href="www.gmail.com">email: support@mailspatch.io
+            </a>
+            <div>
+                <a href="www.facebook.com">
+                    <img src="https://i.ibb.co/mrjfjgn/f.jpg" alt="icon">
+                </a>
+                <a href="www.twitter.com">
+                    <img src="https://i.ibb.co/MSMTPFC/T.jpg" alt="icon">
+                </a>
+                <a href="www.linkedin.com">
+                    <img src="https://i.ibb.co/64rkj44/in.jpg" alt="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- End of Footer -->
+</body>
+</html>
+<script>
+
+</script>
