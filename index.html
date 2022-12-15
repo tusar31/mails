@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mailspatch - Email Testing Tool</title>
+    <link rel = "icon" href = 
+"https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1671098606" 
+        type = "image/x-icon">
 </head>
 <style>
     *{
@@ -30,7 +33,7 @@
         height: 30px;
         width: 100%;
         margin-top: 0px;
-        background-color: #f5f1f1;;
+        background-color: #f8f4f4;
         padding: 20px 0px 20px 0px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
     }
@@ -111,6 +114,7 @@
         padding-left: 15px;
         padding-right: 15px;
         display: block;
+        font-weight: 500;
     }
     #greenbtn{
         border: none;
@@ -387,15 +391,6 @@
     #click > h1{
         font-size:50px;
     }
-    #footerbannerimgDiv{
-        /* border: 1px solid black; */
-        height: 350px;
-        width: 40%;
-    }
-    #footerbannerimgDiv > img{
-        width: -520px;
-        height: 425px;
-    }
     #greenbodybtnclick{
         border: none;
         height: 40px;
@@ -408,6 +403,19 @@
         background-color: #22d172;
         font-weight:500;
     }
+
+    /* Footer Start */
+
+    #footerbannerimgDiv{
+        /* border: 1px solid black; */
+        height: 350px;
+        width: 40%;
+    }
+    #footerbannerimgDiv > img{
+        width: -520px;
+        height: 425px;
+    }
+    
     #footer{
         background-color: #f8f3f3;
         padding: 50px;
@@ -451,7 +459,7 @@
     #greenbtn:hover{
         background-color: #3fe78a;
     }
-
+    
     /* Media */
     @media screen and (max-width:800px){
         #banner{
@@ -844,7 +852,7 @@
         </div>
         <div>
             <h3>Railsware Experience</h3>
-            <a href="#">Mailtrap Blog</a>
+            <a href="#">Mailspatch Blog</a>
             <a href="#">Coupler.io</a>
             <a href="#">Smart Checklist for Jira</a>
             <a href="#">Careers – Railsware Hiring</a>
@@ -871,5 +879,9 @@
 </body>
 </html>
 <script>
+    var whitebtn=document.getElementById("whitebtn");
 
+    whitebtn.addEventListener("click",()=>{
+        location.href="\login.html";
+    });
 </script>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel = "icon" href = 
+"https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1671098606" 
+        type = "image/x-icon">
+</head>
+<style>
+    *{
+        font-family: Segoe UI;
+        color: #213b56;
+    }
+    h1{
+        margin-top: 0%;
+    }
+    body{
+        margin: 0%;
+    }
+    #nav{
+        background-color: #f8f4f4;
+        position:fixed;
+        top: 0%;
+        height: 30px;
+        width: 100%;
+        margin-top: 0px;
+        padding: 20px 0px 20px 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
+        display: flex;
+        justify-content: center;
+
+    }
+    #navDiv{
+        position:fixed;
+        width: 1050px;
+        margin: auto;
+        top: 0%;
+        height: 30px;
+        margin-top: 0px;
+        padding: 20px 0px 20px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #navDiv img{
+        cursor: pointer;
+    }
+    #buttons{
+        width: 155px;
+        height: 34px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #whitebtn,
+    #accountbtn{
+        border: none;
+        border: 1px solid black;
+        border-radius: 6px;
+        background-color: inherit;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        font-weight: 500;
+    }
+    #accountbtn,
+    #etextbox,
+    #ptextbox,
+    #ctextbox,
+    #nextbtn{
+        width: 100%;
+        padding: 15px 0px;
+        margin-bottom: 19px;
+    }
+    #textbox{
+        border: none;
+        border: 1px solid rgb(81, 81, 252);
+        border-radius: 6px;
+        background-color: inherit;
+        display: block;
+        font-weight: 500;
+        padding: 10px 0px;
+    }
+    #whitebtn:hover,
+    #accountbtn:hover{
+        color: white;
+        background-color: #415871;
+        cursor: pointer;
+    }
+    #greenbtn,
+    #nextbtn{
+        border: none;
+        border-radius: 6px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+    #greenbtn:hover,
+    #nextbtn:hover{
+        background-color: #37dc81;
+        cursor: pointer;
+    }
+    #bodysection{
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #bodysection > div:nth-child(1){
+        width: 340px;
+    }
+    #bodysection > div:nth-child(2){
+        width: 45%;
+    }
+    #bodysection > div:nth-child(2) img{
+        width: 90%;
+        margin: auto;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    #bold{
+        font-weight: bold;
+    }
+    #bodysection #loginpicture > img{
+        width: 100%;
+    }
+
+    .textaligncenter{
+        text-align: center;
+    }
+    .indent{
+        padding-left: 3px;
+        margin: 0%;
+        margin-bottom: 2px;
+    }
+    #resend{
+        width: 150px;
+        text-decoration: none;
+        color: rgb(63, 63, 254);
+    }
+    /* Icons */
+    #bodysection #accountbtn > div{
+        display: flex;
+        width: 150px;
+        margin: auto;
+    }
+    #bodysection #accountbtn p{
+        margin: 0%;
+        padding: 0%;
+    }
+    #bodysection #accountbtn > div img{
+        padding-top: 3px;
+        padding-right: 5px;
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Right icon */
+    #loginpicture > div{
+        /* border: 1px solid black; */
+        width: 225px;
+        margin: auto;
+    }
+    #loginpicture > div > p{
+        display: inline;
+    }
+
+    /* Footer Start */
+
+    #footerbannerimgDiv{
+        /* border: 1px solid black; */
+        height: 350px;
+        width: 40%;
+    }
+    #footerbannerimgDiv > img{
+        width: -520px;
+        height: 425px;
+    }
+    
+    #footer{
+        background-color: #f8f3f3;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    #footer > div,
+    #footer div:nth-child(1){
+        /* border: 1px solid black; */
+        width: 200px;
+    }
+    #footer div:nth-child(1) > img{
+        margin-top: 30px;
+        width: 100px;
+    }
+    #footer div:nth-child(4) img{
+        width: 50px;
+    }
+    #footer div:nth-child(4) > div{
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+    }
+    #footer img:hover
+    {
+        border: 1px solid #22d172;
+    }
+    #footer a{
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #footer a:hover{
+        color: #22d172;
+    }
+    #whatismailspatch{
+        padding-left: 30%;
+        background-color: #f8f3f3;
+        padding-right: 10%;
+    }
+    #whatismailspatch h3{
+        margin: 0%;
+    }
+    /* Footer End */
+
+    /* picture icon */
+
+    /* Media */
+    @media screen and (max-width:1100px) and (min-width:850px){
+        /* body{
+            background-color: aliceblue;
+        } */
+        #navDiv{
+            width: 100%;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        
+        #bodysection > div:nth-child(1){
+            width: 420px;
+        }
+    }
+    @media screen and (max-width:851px){
+        /* body{
+            background-color:antiquewhite;
+        } */
+        #navDiv{
+            width: 100%;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        #bodysection{
+            width: 400px;
+        }
+        #bodysection > div:nth-child(2){
+            display: none;
+            /* border: 1px solid black; */
+            width: 0;
+        }
+    }
+
+</style>
+<body>
+    <nav id="nav">
+        <div id="navDiv">
+            <img id="logo" src="https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1670993669" alt="Mailspatch_logo">
+
+            <div id="nav2part">
+                <!--  -->
+            
+                <!--  -->
+                <div id="buttons">
+                    <button id="whitebtn">
+                        Log In
+                    </button>
+                    <button id="greenbtn">
+                        Sign Up
+                    </button>
+                </div>
+            </div>            
+        </div>
+<!--  -->
+    </nav>
+
+    <!-- Body Section -->
+    <div id="bodysection">
+        <div id="login">
+            <h1>Create Free Account</h1>
+            <button id="accountbtn">
+                <div>
+                    <img class="icon" src="\images\google.png" alt="icon">
+                    <p>Use Google account</p>
+                </div>
+                </button>
+            <button id="accountbtn">
+                <div>
+                    <img class="icon" src="\images\github.png" alt="icon">
+                    <p>Use Github account</p>
+                </div>
+                </button>
+            <button id="accountbtn">
+                <div>
+                    <img class="icon" src="\images\office.png" alt="icon">
+                    <p>Use Office account</p>
+                </div>
+            </button>
+            <p class="textaligncenter">OR</p>
+            
+            <!-- SignUp -->
+
+            <p class="indent">Email</p>
+            <input id="etextbox" type="text">
+            <p class="indent">Password</p>
+            <input id="ptextbox" type="password">
+            <p class="indent">Confirmation</p>
+            <input id="ctextbox" type="password">
+            
+            <p class="textaligncenter">You will receive the confirmation email after submitting this form.</p>
+
+            <button id="nextbtn">Sign Up</button>
+            <p class="textaligncenter">By creating a Mailtrap account, you agree to our
+                <a id="resend" href="#">Terms of Service</a> and <a id="resend" href="#">Privacy Policy</a>. We'll occasionally send you account related emails.</p>
+
+            <!-- SignUp End -->
+
+        </div>
+
+
+        <div id="loginpicture">
+            <img src="https://assets.mailtrap.io/packs/assets/landing/signup-29d04f096f43afe622ed.svg" alt="picture">
+            <div>
+                <img style="width: 30px;" src="https://assets.mailtrap.io/packs/assets/landing/no-cc-f64815040928cb2cd45e.svg" alt="icon">
+                <p id="bold">No credit card needed</p>
+            </div>
+            <div>
+                <img style="width: 30px;" src="https://assets.mailtrap.io/packs/assets/landing/no-contract-6c7fcc24afc64e708f1d.svg" alt="icon">
+                <p id="bold">No contract needed</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Body section -->
+    <!-- Footer -->
+
+    <div id="footer">
+        <div>
+            <img src="https://i.ibb.co/N7nSjk3/flogo.jpg" alt="footerimage">
+        </div>
+        <div>
+            <h3>Mailspatch</h3>
+            <a href="#">Pricing</a>
+            <a href="#">Changelog</a>
+            <a href="#">Status</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Navigational Information</a>
+        </div>
+        <div>
+            <h3>Railsware Experience</h3>
+            <a href="#">Mailspatch Blog</a>
+            <a href="#">Coupler.io</a>
+            <a href="#">Smart Checklist for Jira</a>
+            <a href="#">Careers – Railsware Hiring</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <a href="www.gmail.com">email: support@mailspatch.io
+            </a>
+            <div>
+                <a href="www.facebook.com">
+                    <img src="https://i.ibb.co/mrjfjgn/f.jpg" alt="icon">
+                </a>
+                <a href="www.twitter.com">
+                    <img src="https://i.ibb.co/MSMTPFC/T.jpg" alt="icon">
+                </a>
+                <a href="www.linkedin.com">
+                    <img src="https://i.ibb.co/64rkj44/in.jpg" alt="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="whatismailspatch">
+        <h3>What is Mailspatch?</h3>
+        <p>Mailspatch is a test mail server solution that allows testing email notifications without sending them to the real users of your application. Not only does Mailspatch work as a powerful email test tool, it also lets you view your dummy emails online, forward them to your regular mailbox, share with the team and more! Mailspatch is a mail server test tool built by Railsware Product Studio LLC, a premium software development consulting company.</p>
+    </div>
+
+<!-- End of Footer -->
+
+</body>
+</html>
+<script>
+    var logo=document.getElementById("logo");
+
+    logo.addEventListener("click",()=>{
+        location.href="\index.html";
+    });
+
+    var whitebtn=document.getElementById("whitebtn");
+
+    whitebtn.addEventListener("click",()=>{
+        location.href="\login.html";
+    });
+
+    var greenbtn=document.getElementById("greenbtn");
+
+    greenbtn.addEventListener("click",()=>{
+        location.href="\signup.html";
+    });
+
+    var etextbox=document.getElementById("etextbox");
+    var ptextbox=document.getElementById("ptextbox");
+    var ctextbox=document.getElementById("ctextbox");
+
+    var nextbtn=document.getElementById("nextbtn");
+
+    nextbtn.addEventListener("click",(e)=>{
+        var userDetails=JSON.parse(localStorage.getItem("userDetails"))||[];
+
+        var obj={};
+        obj.e=etextbox.value;
+        obj.p=ptextbox.value;
+        obj.c=ctextbox.value;
+
+        userDetails.push(obj);
+
+        localStorage.setItem("userDetails",JSON.stringify(userDetails));
+
+        alert("Successfully signed up.");
+        location.href="\login.html";
+
+    });
+
+</script>
