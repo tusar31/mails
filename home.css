@@ -82,15 +82,88 @@
 
 #topnavbar{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-  position: fixed;
+  position:fixed;
   width: 100%;
   background-color: white;
   margin: -9.5px;
   padding-right: 7px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #sidebaricons{
   width: 17px;
+}
+/* PROFILE */
+
+.dropdown2 .dropbtn2 {
+  border: none;
+  font-size: 14.5px;  
+  font-weight: bolder;
+  color: #243F5c;
+  background-color: inherit;
+  padding-top: 8px;
+  padding-right: 170px;
+}
+    .dropdown-content2 {
+  background-color: white;
+  display: none;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: -35px;
+}
+    .dropdown-content2 a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  display: block;
+  font-size: 14.5px;
+}
+
+.dropdown-content2 > a{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+    .dropdown-content2 > a:hover {
+  background-color: rgb(250, 248, 248);
+}
+
+    .dropdown2:hover .dropdown-content2 {
+      display: block;
+    }
+
+    #last{
+      padding-bottom: 20px;
+  }
+
+  #first{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #first > a{
+    color: rgb(73, 73, 255);
+  }
+
+  #first > a:hover{
+    text-decoration: underline;
+  }
+
+  #first img{
+    /* border: 1px solid black; */
+    display: block;
+    width: 35px;
+    border-radius: 50%;
+  }
+
+  #text{
+    display: flex;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 /* MAIN */
