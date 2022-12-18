@@ -8,6 +8,7 @@
     <link rel = "icon" href = 
 "https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1671098606" 
         type = "image/x-icon">
+        
 </head>
 <style>
     *{
@@ -25,6 +26,9 @@
         background-color: #f4eaea;
         margin: 0%;
     }
+    #logo{
+        cursor: pointer;
+    }
     #nav{
         position:fixed;
         top: 0%;
@@ -36,9 +40,15 @@
         background-color: #f8f4f4;
         padding: 20px 0px 20px 0px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
+        z-index: 1;
+    }
+
+    #nav >img{
+        height:30px;
     }
 
     #nav2part{
+        /* border: 1px solid black; */
         display: flex;
         justify-content: space-around;
         width:700px;
@@ -58,31 +68,36 @@
   color: #243F5c;
   background-color: inherit;
 }
+/* PADDING */
     .dropdown-content {
   background-color: white;
   display: none;
   position: absolute;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 0px;
 }
     .dropdown-content a {
   text-decoration: none;
   color: black;
-  padding: 10px 30px;
+  padding: 1px 5px;
   display: block;
   font-size: 14.5px;
 }
 #last{
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
     .dropdown-content a:hover {
+        cursor: pointer;
   color: #22d172;
 }
 #first{
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
+.dropdown:hover{
+    cursor: pointer;
+}
     .dropdown:hover .dropdown-content {
   display: block;
     }
@@ -93,6 +108,7 @@
         font-weight: bold;
     }
     .page:hover{
+        cursor: pointer;
         color: #46668b;
     }
     .page{
@@ -106,6 +122,9 @@
         display: flex;
         justify-content: space-between;
     }
+    #buttons:hover{
+        cursor: pointer;
+    }
     #whitebtn{
         border: none;
         border: 1px solid black;
@@ -115,6 +134,7 @@
         padding-right: 15px;
         display: block;
         font-weight: 500;
+        height: 30px;
     }
     #greenbtn{
         border: none;
@@ -125,6 +145,11 @@
         color: white;
         background-color: #22d172;
         font-weight:500;
+        height: 30px;
+    }
+    #whitebtn:hover,
+    #greenbtn:hover{
+        cursor: pointer;
     }
     #body_Section{
         text-align: center;
@@ -133,7 +158,9 @@
         font-size: 40px;
         margin: 140px 0px 60px 0px;
     }
-    #greenbodybtn{
+    
+    #greenbodybtn,
+    #greenbodybtn2{
         border: none;
         height: 40px;
         border-radius: 6px;
@@ -145,6 +172,10 @@
         color: white;
         background-color: #22d172;
         font-weight:500;
+    }
+    #greenbodybtn,
+    #greenbodybtn2{
+        cursor: pointer;
     }
 
     #banner{
@@ -172,6 +203,7 @@
         text-align: center;
         margin: auto;
     }
+
     /* First Grid Starts */
     #firstGrid{
         width: 900px;
@@ -229,6 +261,7 @@
     #sandboxPointTextLine img{
         width: 50px;
     }
+
     /* Sand Box */
 
     /* <!-- body Section --> */
@@ -244,9 +277,12 @@
         margin: auto;
         margin-top: 40px;
     }
-    #picture > img{
+    #picturediv{
         width: 100%;
         margin-bottom: 50px;
+    }
+    #picturediv > img{
+        width: 100%;
     }
     #pictureText ul li::before{
         color: #22d172;
@@ -306,8 +342,13 @@
         height: 35px;
         border-radius: 10px;
         font-weight:900;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-    #clientCard{
+    #insideClientDiv > button:hover{
+        cursor: pointer;
+    }
+    #clientCard1,
+    #clientCard2{
         background-color: white;
         padding-left: 25px;
         padding-right: 25px;
@@ -316,17 +357,20 @@
         min-height: 300px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-    #clientCard > img{
+    #clientCard1 > img,
+    #clientCard2 > img{
         width: 50px;
         margin-bottom: 10px;
         display: block;
         position: relative;
         top: -10px;
     }
-    #clientCard h3{
+    #clientCard1 h3,
+    #clientCard2 h3{
         display: inline;
     }
-    #clientCard a{
+    #clientCard1 a,
+    #clientCard2 a{
         text-decoration: none;
     }
 
@@ -339,6 +383,7 @@
         text-align: center;
         padding-top: 100px;
     }
+
     #FAQ{
         margin: 75px 0px;
         background-color: #f5f8f3;
@@ -346,6 +391,7 @@
         padding-bottom: 50px;
     }
     #FAQ > h1{
+        padding-top: 30px;
         text-align: center;
         margin-bottom: 75px;
     }
@@ -369,6 +415,7 @@
         position: relative;
         top: -10px;
     }
+
     /* Footer */
     #footerbanner{
         margin-top: -73px;
@@ -403,8 +450,9 @@
         background-color: #22d172;
         font-weight:500;
     }
-
-    /* Footer Start */
+    #greenbodybtnclick:hover{
+        cursor: pointer;
+    }
 
     #footerbannerimgDiv{
         /* border: 1px solid black; */
@@ -415,7 +463,9 @@
         width: -520px;
         height: 425px;
     }
-    
+
+    /* Footer Start */
+
     #footer{
         background-color: #f8f3f3;
         padding: 50px;
@@ -442,6 +492,7 @@
     }
     #footer img:hover
     {
+        cursor: pointer;
         border: 1px solid #22d172;
     }
     #footer a{
@@ -450,6 +501,7 @@
         margin-bottom: 10px;
     }
     #footer a:hover{
+        cursor: pointer;
         color: #22d172;
     }
     
@@ -457,9 +509,502 @@
     #greenbodybtnclick:hover,
     #greenbodybtn:hover,
     #greenbtn:hover{
+        cursor: pointer;
         background-color: #3fe78a;
     }
-    
+
+    @media screen and (max-width:1100px) and (min-width:860.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        #video{
+            width: 800px;
+        }
+        #firstGrid{
+            width: 800px;
+        }
+        #sandboxDiv{
+            width: 800px;
+        }
+        #picture{
+            width:800px;
+        }
+        #insideClientDiv{
+            width:800px;
+            /* background-color: #22d172; */
+        }
+        #click{
+            /* border: 5px solid yellow; */
+            margin-top: -5px;
+            margin-left: 185px;
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:800.1px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            width: 400px;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:800px) and (min-width:750.1px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:750.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        #video{
+            width: 700px;
+        }
+        #firstGrid{
+            width: 700px;
+        }
+        #sandboxDiv{
+            width: 700px;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:700px;
+        }
+        #insideClientDiv{
+            width:740px;
+            gap: 5px;
+            /* background-color: #22d172; */
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 75px;
+            font-size: 28px;
+        }
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            /* background-color: #22d172; */
+        }
+        #FAQGrid{
+            width:700px;
+            gap: 10px;
+            /* background-color: #22d172; */
+        }
+        #click{
+            /* border: 5px solid yellow; */
+            margin-top: -5px;
+            margin-left: 95px;
+        }
+    }
+    @media screen and (max-width:750px) and (min-width:649.9px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:650px) and (min-width:570px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 15%;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:750px) and (min-width:570px){
+        #nav2part{
+            /* background-color: #87a8cb; */
+            width: 450px;
+            gap: 15px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        #nav{
+            height: 60px;
+        }
+        #dropdowncontent2{
+            /* border: 5px solid black; */
+            margin-left: -155px;
+        }
+        #body_Section > h1{
+            margin: 160px 0px 50px 0px;
+        }
+        #video{
+            width: 525px;
+        }
+        #firstGrid{
+            width: 570px;
+            gap: 5px;
+        }
+        #iconDiv > img{
+            width: 50px;
+        }
+        #iconDiv{
+            width: 90px;
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 15px;
+            /* background-color: #22d172; */
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1000px;
+            /* background-color: #2254d1; */
+        }
+        #insideClientDiv{
+            width:90%;
+            /* background-color: #22d172; */
+        }
+        #clientCard1{
+            width: 80%;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+        /* HERE */
+        #FAQGrid{
+            width:500px;
+            grid-template-columns: repeat(1,1fr);
+            /* background-color: #1a2e44; */
+        }
+        /* Footer */
+        #footerbanner{
+            flex-direction: column;
+        }
+        #click{
+            margin-top: 75px;
+            margin-left: -180px;
+        }
+        #click > h1{
+            font-size: 40px;
+        }
+/* ABOVE */
+    /* ABOVE */
+        #footer{
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-width:569.9px){
+        #nav2part{
+            width: 250px;
+            gap: 15px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        #nav{
+            height: 97px;
+        }
+        #dropdowncontent2{
+            /* border: 5px solid black; */
+            margin-left: -155px;
+        }
+        #body_Section > h1{
+            margin: 170px 0px 30px 0px;
+            font-size:xx-large;
+        }
+        #banner{
+            margin-top: 45px;
+            margin-left: 65px;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+        #banner_img{
+            height: 25px;
+            width: 100px;
+        }
+        #greenbodybtn{
+            margin-top: 40px;
+        }
+        #video{
+            width: 425px;
+        }
+        #bodyh1{
+            padding-top: 37px;
+            width: 400px;
+            font-size:30px;
+        }
+        #firstGrid{
+            width: 400px;
+            margin-top: 25px;
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 20px;
+        }
+        #iconDiv > img{
+            width: 55px;
+        }
+        #iconDiv{
+            width: 100px;
+        }
+        #aboveSandBox > h1{
+            font-size:x-large;
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 10px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+            /* background-color: #2254d1; */
+        }
+        #insideClientDiv{
+            width:90%;
+            /* background-color: #22d172; */
+        }
+        #clientCard1{
+            width: 80%;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+        #FAQGrid{
+            width:400px;
+            grid-template-columns: repeat(1,1fr);
+            /* background-color: #1a2e44; */
+        }
+        /* Footer */
+        #footerbanner{
+            flex-direction: column;
+        }
+        #click{
+            height: 90px;
+            margin-top: 75px;
+            margin-left: -200px;
+        }
+        #click > h1{
+            font-size: 38px;
+        }
+        #footer{
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-width:550px) and (min-width:512px){
+        #banner{
+            margin-left: 50px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width:512.1px) and (min-width:470px){
+        #banner{
+            margin-left: 32px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 400px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+
+        }
+        #clientDiv > h1{
+            font-size: 28px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width:469.9px){
+        #banner{
+            margin-left: 20px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 370px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1275px;
+        }
+        #clientDiv > h1{
+            font-size: 28px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+
     /* Media */
     @media screen and (max-width:800px){
         #banner{
@@ -472,6 +1017,8 @@
     }
 
     /* Media */
+
+
 </style>
 <body>
     <nav id="nav">
@@ -480,27 +1027,27 @@
 <div id="nav2part">
     <!--  -->
     <div class="dropdown">
-        <button class="dropbtn">Email Testing ∨</button>
+        <button class="dropbtn">Email Testing &#709</button>
         <div class="dropdown-content">
-            <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/qa_automation_icon_menu.svg" alt="logo">
+            <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/qa_automation_icon_menu.svg" alt="logo">
                 <div id="first">
                     <p class="bold">QA Automation</p>
                     <p>Automation for Email Testing</p>
                 </div>
                 </a>
-                <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/check_html_icon_menu.svg" alt="logo">
+                <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/check_html_icon_menu.svg" alt="logo">
                     <div>
                         <p class="bold">HTML Check</p>
                         <p>Find HTML/CSS issues</p>
                     </div>
                     </a>
-                    <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/fake_smtp_server_icon_menu.svg" alt="logo">
+                    <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/fake_smtp_server_icon_menu.svg" alt="logo">
                         <div>
                             <p class="bold">Fake SMTP Server</p>
                             <p>Your own SMTP server</p>
                         </div>
                         </a>
-                        <a id="text" href="#"><img src="https://mailtrap.io/wp-content/uploads/2021/06/api_icon_menu.svg" alt="logo">
+                        <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/api_icon_menu.svg" alt="logo">
                             <div id="last">
                 <p class="bold">Sandbox API</p>
                 <p>Integrate with your application</p>
@@ -510,32 +1057,32 @@
     </div>
 
 
-    <a class="page" href="#">Email API</a>
-    <a class="page" href="#">Pricing</a>
+    <a class="page" href="\construct.html">Email API</a>
+    <a class="page" href="\construct.html">Pricing</a>
 
 
     <div class="dropdown">
-        <button class="dropbtn">Resources ∨</button>
-        <div class="dropdown-content">
-            <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-09.svg" alt="logo">
+        <button class="dropbtn">Resources &#709</i></button>
+        <div id="dropdowncontent2" class="dropdown-content">
+            <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-09.svg" alt="logo">
                 <div id="first">
                     <p class="bold">API</p>
                     <p>Integrate with existing resources</p>
                 </div>
                 </a>
-                <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-08.svg" alt="logo">
+                <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-08.svg" alt="logo">
                     <div>
                         <p class="bold">Case Studies</p>
                         <p>Success stories of our customers</p>
                     </div>
                     </a>
-                    <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-07.svg" alt="logo">
+                    <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-07.svg" alt="logo">
                         <div>
                             <p class="bold">Blog</p>
                             <p>The best content about emails</p>
                         </div>
                         </a>
-                        <a id="text" href="#"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/03/Transactional-Email-Sending_icon-06.svg" alt="logo">
+                        <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/03/Transactional-Email-Sending_icon-06.svg" alt="logo">
                             <div id="last">
                 <p class="bold">Help</p>
                 <p>How-to's and Knowledge base</p>
@@ -707,7 +1254,9 @@
 </div>
 <!-- NOTE IT -->
 <div id="picture">
-    <img src="https://mailtrap.io/wp-content/uploads/2021/03/img_team.svg" alt="image">
+    <div id="picturediv">
+        <img id="pictureImage" src="https://mailtrap.io/wp-content/uploads/2021/03/img_team.svg" alt="image">
+    </div>
     <div id="pictureText">
         <div>
             <h3>Developers</h3>
@@ -740,7 +1289,7 @@
 </div>
 
 <div id="body_Section">
-    <button id="greenbodybtn">
+    <button id="greenbodybtn2">
         Sign Up For Free
     </button> 
 </div>
@@ -750,15 +1299,15 @@
     <div id="clientDiv">
         <h1>From our #BestClientEver</h1>
         <div id="insideClientDiv">
-            <button><</button>
-            <div id="clientCard">
+            <button id="leftbtn"><</button>
+            <div id="clientCard1">
                 <img src="https://i.ibb.co/CHkG7RG/bird.jpg" alt="icon">
                 <h3>Mr. Glass</h3>
                 <a id="inline" href="https://twitter.com/MisterGlass">@MisterGlass</a>
                 <p>Shout out to @Mailspatch, hands down the best way to handle mail sending in local/test environments.</p>
                 <p id="endDate"> 11:43 PM – May 21, 2020 </p>
             </div>
-            <div id="clientCard">
+            <div id="clientCard2">
                 <img src="https://i.ibb.co/CHkG7RG/bird.jpg" alt="icon">
                 <h3>Rado Georgiev</h3>
                 <a id="inline" href="https://twitter.com/Rado_g">@Rado_g</a>
@@ -767,7 +1316,7 @@
                 <p id="endDate">
                     1:32 PM – Jan 06, 2021                                </p>
             </div>
-            <button>></button>
+            <button id="rightbtn">></button>
         </div>
     </div>
 
@@ -779,11 +1328,11 @@
         <h1>Trusted by 150,000+ monthly active users</h1>
 <!-- Banner -->
 <div id="banner">
-    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Adobe.svg" alt="banner">
-    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Atlassian.svg" alt="banner">
-    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Calendly.svg" alt="banner">
-    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/Yelp.svg" alt="banner">
-    <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/04/UserTesting.svg" alt="banner">
+    <img id="banner_img2" src="https://mailtrap.io/wp-content/uploads/2021/04/Adobe.svg" alt="banner">
+    <img id="banner_img2" src="https://mailtrap.io/wp-content/uploads/2021/04/Atlassian.svg" alt="banner">
+    <img id="banner_img2" src="https://mailtrap.io/wp-content/uploads/2021/04/Calendly.svg" alt="banner">
+    <img id="banner_img2" src="https://mailtrap.io/wp-content/uploads/2021/04/Yelp.svg" alt="banner">
+    <img id="banner_img2" src="https://mailtrap.io/wp-content/uploads/2021/04/UserTesting.svg" alt="banner">
 </div>
 <!--  -->
     </div>
@@ -826,7 +1375,7 @@
         <div id="click">
             <h3>Create Your Free Account</h3>
             <h1>In 3 Clicks</h1>
-            <button id="greenbodybtnclick">
+            <button class="signup" id="greenbodybtnclick">
                 Sign Up Now
             </button>
         </div>
@@ -842,33 +1391,33 @@
             <img src="https://i.ibb.co/N7nSjk3/flogo.jpg" alt="footerimage">
         </div>
         <div>
-            <h3>Mailtrap</h3>
-            <a href="#">Pricing</a>
-            <a href="#">Changelog</a>
-            <a href="#">Status</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Navigational Information</a>
+            <h3>Mailspatch</h3>
+            <a href="\construct.html">Pricing</a>
+            <a href="\construct.html">Changelog</a>
+            <a href="\construct.html">Status</a>
+            <a href="\construct.html">Terms of Service</a>
+            <a href="\construct.html">Privacy Policy</a>
+            <a href="\construct.html">Navigational Information</a>
         </div>
         <div>
             <h3>Railsware Experience</h3>
-            <a href="#">Mailspatch Blog</a>
-            <a href="#">Coupler.io</a>
-            <a href="#">Smart Checklist for Jira</a>
-            <a href="#">Careers – Railsware Hiring</a>
+            <a href="\construct.html">Mailspatch Blog</a>
+            <a href="\construct.html">Coupler.io</a>
+            <a href="\construct.html">Smart Checklist for Jira</a>
+            <a href="\construct.html">Careers – Railsware Hiring</a>
         </div>
         <div>
             <h3>Contact</h3>
             <a href="www.gmail.com">email: support@mailspatch.io
             </a>
             <div>
-                <a href="www.facebook.com">
+                <a href="https://www.facebook.com/">
                     <img src="https://i.ibb.co/mrjfjgn/f.jpg" alt="icon">
                 </a>
-                <a href="www.twitter.com">
+                <a href="https://twitter.com/home">
                     <img src="https://i.ibb.co/MSMTPFC/T.jpg" alt="icon">
                 </a>
-                <a href="www.linkedin.com">
+                <a href="https://www.linkedin.com/feed/">
                     <img src="https://i.ibb.co/64rkj44/in.jpg" alt="icon">
                 </a>
             </div>
@@ -878,10 +1427,4 @@
 <!-- End of Footer -->
 </body>
 </html>
-<script>
-    var whitebtn=document.getElementById("whitebtn");
-
-    whitebtn.addEventListener("click",()=>{
-        location.href="\login.html";
-    });
-</script>
+<script src="\index.js"></script>

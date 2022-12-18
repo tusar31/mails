@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailspatch - Email Testing Tool</title>
+    <link rel = "icon" href = 
+"https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1671098606" 
+        type = "image/x-icon">
+        
+</head>
+<style>
+    *{
+        font-family: Segoe UI;
+        color: #213b56;
+    }
+    p{
+        margin: 5px;
+    }
+    #lightbody{
+        background-color: #f8f3f3;
+        height: 2300px;
+    }
+    body{
+        background-color: #f4eaea;
+        margin: 0%;
+    }
+    #logo{
+        cursor: pointer;
+    }
+    #nav{
+        position:fixed;
+        top: 0%;
+        display: flex;
+        justify-content: space-around;
+        height: 30px;
+        width: 100%;
+        margin-top: 0px;
+        background-color: #f8f4f4;
+        padding: 20px 0px 20px 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
+        z-index: 1;
+    }
+
+    #nav >img{
+        height:30px;
+    }
+
+    #nav2part{
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        width:700px;
+    }
+
+    .page{
+        display: inline;
+        text-decoration: none;
+        color: #243F5c;
+        font-weight: bolder;
+    }
+
+.dropdown .dropbtn {
+  border: none;
+  font-size: 14.5px;  
+  font-weight: bolder;
+  color: #243F5c;
+  background-color: inherit;
+}
+/* PADDING */
+    .dropdown-content {
+  background-color: white;
+  display: none;
+  position: absolute;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+    .dropdown-content a {
+  text-decoration: none;
+  color: black;
+  padding: 1px 5px;
+  display: block;
+  font-size: 14.5px;
+}
+#last{
+    padding-bottom: 0px;
+}
+    .dropdown-content a:hover {
+        cursor: pointer;
+  color: #22d172;
+}
+#first{
+    padding-top: 0px;
+}
+
+.dropdown:hover{
+    cursor: pointer;
+}
+    .dropdown:hover .dropdown-content {
+  display: block;
+    }
+    #seconddropimg{
+        width:40px;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .page:hover{
+        cursor: pointer;
+        color: #46668b;
+    }
+    .page{
+        font-size: 14.5px; 
+    }
+    #text{
+        display: flex;
+    }
+    #buttons{
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #buttons:hover{
+        cursor: pointer;
+    }
+    #whitebtn{
+        border: none;
+        border: 1px solid black;
+        border-radius: 6px;
+        background-color: inherit;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        font-weight: 500;
+        height: 30px;
+    }
+    #greenbtn{
+        border: none;
+        border-radius: 6px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+        height: 30px;
+    }
+    #whitebtn:hover,
+    #greenbtn:hover{
+        cursor: pointer;
+    }
+    #body_Section{
+        text-align: center;
+    }
+    #body_Section > h1{
+        font-size: 40px;
+        margin: 140px 0px 60px 0px;
+    }
+    
+    #greenbodybtn,
+    #greenbodybtn2{
+        border: none;
+        height: 40px;
+        border-radius: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+    #greenbodybtn,
+    #greenbodybtn2{
+        cursor: pointer;
+    }
+
+    #banner{
+        width: 700px;
+        margin: auto;
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #banner_img{
+        height: 35px;
+    }
+
+    #video{
+        width: 1000px;
+        display: block;
+        margin: auto;
+        margin-top: 60px;
+    }
+    /* video */
+
+    #bodyh1{
+        padding-top: 50px;
+        width: 500px;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* First Grid Starts */
+    #firstGrid{
+        width: 900px;
+        display: grid;
+        margin: auto;
+        margin-top: 50px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        row-gap: 40px;
+    }
+    #firstGridDiv{
+        display: flex;
+        gap: 15px;
+    }
+    #iconDiv{
+        /* border: 1px solid black; */
+        width: 150px;
+    }
+    #iconDiv > img{
+        margin-top: 20px;
+        width: 75px;
+    }
+    /* First Grid Ends */
+
+    /* Sand Box */
+    #aboveSandBox{
+        margin-top: 90px;
+    }
+    #aboveSandBox > h1,
+    #aboveSandBox > p{
+        text-align: center;
+    }
+    #sandboxDiv{
+        /* border: 1px solid black; */
+        width: 900px;
+        margin: auto;
+        /* margin-top: 25px; */
+        display: flex;
+    }
+    #sandboxDiv > div{
+        width: 50%;
+    }
+    #sandboxDivimgDiv > img{
+        width: 100%;
+    }
+
+    #sandboxPointTextLine{
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+    }
+    #sandboxPointTextLine h3{
+        margin: 3px;
+    }
+    #sandboxPointTextLine img{
+        width: 50px;
+    }
+
+    /* Sand Box */
+
+    /* <!-- body Section --> */
+    #headingDiv{
+        width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    /* NOTE IT */
+    #picture{
+        width:900px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    #picturediv{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #picturediv > img{
+        width: 100%;
+    }
+    #pictureText ul li::before{
+        color: #22d172;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    ul li::before{
+        content: "• ";
+        color: #22d172;
+    }
+    li{
+        margin: 25px 0px;
+    }
+    #pictureText{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 18px;
+    }
+
+    /* Client */
+    #clientDiv{
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    #clientDiv > h1{
+        text-align: center;
+    }
+    #inline,
+    #endDate{
+        font-weight: 100;
+    }
+    #endDate{
+        margin-top: 10px;
+    }
+    #inline{
+        display: inline;
+    }
+    #clientDiv{
+        background-color: #f5f8f3;
+        margin-bottom: -40px;
+    }
+    #insideClientDiv{
+        display:flex;
+        width:1000px;
+        margin: auto;
+        margin-top: 75px;
+        gap: 25px;
+        align-items: center;
+    }
+    #insideClientDiv > button{
+        background-color: white;
+        border: none;
+        display: block;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        font-weight:900;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #insideClientDiv > button:hover{
+        cursor: pointer;
+    }
+    #clientCard1,
+    #clientCard2{
+        background-color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 40%;
+        border-radius: 10px;
+        min-height: 300px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #clientCard1 > img,
+    #clientCard2 > img{
+        width: 50px;
+        margin-bottom: 10px;
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+    #clientCard1 h3,
+    #clientCard2 h3{
+        display: inline;
+    }
+    #clientCard1 a,
+    #clientCard2 a{
+        text-decoration: none;
+    }
+
+    /* Trusted Section */
+    #trusted{
+        background-color: #fdf9f9;
+        height: 350px;
+    }
+    #trusted > h1{
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    #FAQ{
+        margin: 75px 0px;
+        background-color: #f5f8f3;
+        margin-top: -50px;
+        padding-bottom: 50px;
+    }
+    #FAQ > h1{
+        padding-top: 30px;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+    #FAQGrid{
+        width:800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    #FAQGrid > div{
+        background-color: white;
+        border-radius: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 40px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #FAQGrid > div > img{
+        width: 50px;
+        position: relative;
+        top: -10px;
+    }
+
+    /* Footer */
+    #footerbanner{
+        margin-top: -73px;
+        background-color: #1a2e44;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #click{
+        /* border: 1px solid black; */
+        height: 150px;
+        width: 40%;
+        margin-left: 250px;
+    }
+    #click > h3,
+    #click > h1{
+        margin: 0%;
+        color: white;
+    }
+    #click > h1{
+        font-size:50px;
+    }
+    #greenbodybtnclick{
+        border: none;
+        height: 40px;
+        border-radius: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        margin-top: 20px;
+        color: white;
+        background-color: #22d172;
+        font-weight:500;
+    }
+    #greenbodybtnclick:hover{
+        cursor: pointer;
+    }
+
+    #footerbannerimgDiv{
+        /* border: 1px solid black; */
+        height: 350px;
+        width: 40%;
+    }
+    #footerbannerimgDiv > img{
+        width: -520px;
+        height: 425px;
+    }
+
+    /* Footer Start */
+
+    #footer{
+        background-color: #f8f3f3;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    #footer > div,
+    #footer div:nth-child(1){
+        /* border: 1px solid black; */
+        width: 200px;
+    }
+    #footer div:nth-child(1) > img{
+        margin-top: 30px;
+        width: 100px;
+    }
+    #footer div:nth-child(4) img{
+        width: 50px;
+    }
+    #footer div:nth-child(4) > div{
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+    }
+    #footer img:hover
+    {
+        cursor: pointer;
+        border: 1px solid #22d172;
+    }
+    #footer a{
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #footer a:hover{
+        cursor: pointer;
+        color: #22d172;
+    }
+    
+    /* Footer End */
+    #greenbodybtnclick:hover,
+    #greenbodybtn:hover,
+    #greenbtn:hover{
+        cursor: pointer;
+        background-color: #3fe78a;
+    }
+
+    @media screen and (max-width:1100px) and (min-width:860.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        #video{
+            width: 800px;
+        }
+        #firstGrid{
+            width: 800px;
+        }
+        #sandboxDiv{
+            width: 800px;
+        }
+        #picture{
+            width:800px;
+        }
+        #insideClientDiv{
+            width:800px;
+            /* background-color: #22d172; */
+        }
+        #click{
+            /* border: 5px solid yellow; */
+            margin-top: -5px;
+            margin-left: 185px;
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:800.1px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            width: 400px;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:800px) and (min-width:750.1px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:860px) and (min-width:750.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        #video{
+            width: 700px;
+        }
+        #firstGrid{
+            width: 700px;
+        }
+        #sandboxDiv{
+            width: 700px;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:700px;
+        }
+        #insideClientDiv{
+            width:740px;
+            gap: 5px;
+            /* background-color: #22d172; */
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 75px;
+            font-size: 28px;
+        }
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            /* background-color: #22d172; */
+        }
+        #FAQGrid{
+            width:700px;
+            gap: 10px;
+            /* background-color: #22d172; */
+        }
+        #click{
+            /* border: 5px solid yellow; */
+            margin-top: -5px;
+            margin-left: 95px;
+        }
+    }
+    @media screen and (max-width:750px) and (min-width:649.9px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 25%;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:650px) and (min-width:570px){
+        #banner:nth-child(2){
+            margin-top: 45px;
+            margin-left: 15%;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+    }
+    @media screen and (max-width:750px) and (min-width:570px){
+        #nav2part{
+            /* background-color: #87a8cb; */
+            width: 450px;
+            gap: 15px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        #nav{
+            height: 60px;
+        }
+        #dropdowncontent2{
+            /* border: 5px solid black; */
+            margin-left: -155px;
+        }
+        #body_Section > h1{
+            margin: 160px 0px 50px 0px;
+        }
+        #video{
+            width: 525px;
+        }
+        #firstGrid{
+            width: 570px;
+            gap: 5px;
+        }
+        #iconDiv > img{
+            width: 50px;
+        }
+        #iconDiv{
+            width: 90px;
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 15px;
+            /* background-color: #22d172; */
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1000px;
+            /* background-color: #2254d1; */
+        }
+        #insideClientDiv{
+            width:90%;
+            /* background-color: #22d172; */
+        }
+        #clientCard1{
+            width: 80%;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+        /* HERE */
+        #FAQGrid{
+            width:500px;
+            grid-template-columns: repeat(1,1fr);
+            /* background-color: #1a2e44; */
+        }
+        /* Footer */
+        #footerbanner{
+            flex-direction: column;
+        }
+        #click{
+            margin-top: 75px;
+            margin-left: -180px;
+        }
+        #click > h1{
+            font-size: 40px;
+        }
+/* ABOVE */
+    /* ABOVE */
+        #footer{
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-width:569.9px){
+        #nav2part{
+            width: 250px;
+            gap: 15px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        #nav{
+            height: 97px;
+        }
+        #dropdowncontent2{
+            /* border: 5px solid black; */
+            margin-left: -155px;
+        }
+        #body_Section > h1{
+            margin: 170px 0px 30px 0px;
+            font-size:xx-large;
+        }
+        #banner{
+            margin-top: 45px;
+            margin-left: 65px;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* background-color: #22d172; */
+        }
+        #banner_img{
+            height: 25px;
+            width: 100px;
+        }
+        #greenbodybtn{
+            margin-top: 40px;
+        }
+        #video{
+            width: 425px;
+        }
+        #bodyh1{
+            padding-top: 37px;
+            width: 400px;
+            font-size:30px;
+        }
+        #firstGrid{
+            width: 400px;
+            margin-top: 25px;
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 20px;
+        }
+        #iconDiv > img{
+            width: 55px;
+        }
+        #iconDiv{
+            width: 100px;
+        }
+        #aboveSandBox > h1{
+            font-size:x-large;
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 10px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+            /* background-color: #2254d1; */
+        }
+        #insideClientDiv{
+            width:90%;
+            /* background-color: #22d172; */
+        }
+        #clientCard1{
+            width: 80%;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            /* background-color: #22d172; */
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+        #FAQGrid{
+            width:400px;
+            grid-template-columns: repeat(1,1fr);
+            /* background-color: #1a2e44; */
+        }
+        /* Footer */
+        #footerbanner{
+            flex-direction: column;
+        }
+        #click{
+            height: 90px;
+            margin-top: 75px;
+            margin-left: -200px;
+        }
+        #click > h1{
+            font-size: 38px;
+        }
+        #footer{
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-width:550px) and (min-width:512px){
+        #banner{
+            margin-left: 50px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 450px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width:512.1px) and (min-width:470px){
+        #banner{
+            margin-left: 32px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 400px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1300px;
+
+        }
+        #clientDiv > h1{
+            font-size: 28px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width:469.9px){
+        #banner{
+            margin-left: 20px;
+            /* background-color: #22d172; */
+        }
+        #sandboxDiv{
+            width: 370px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #sandboxDiv > div{
+            width: 100%;
+        }
+        #headingDiv{
+            /* background-color: #22d172; */
+            font-size:small;
+        }
+        #picture{
+            width:350px;
+        }
+        #picture img{
+            height: 500px;
+        }
+        #pictureText{
+            grid-template-columns: repeat(1,1fr);
+            gap: 8px;
+        }
+        #greenbodybtn2{
+            display: none;
+        }
+        #clientDiv{
+            padding-top: 1275px;
+        }
+        #clientDiv > h1{
+            font-size: 28px;
+        }
+        #clientCard2{
+            display: none;
+            width: 0px;
+        }
+        #trusted > h1{
+            padding-top: 50px;
+            font-size: 28px;
+        }
+        #FAQ > h1{
+            font-size: 28px;
+        }
+    }
+
+
+    /* Media */
+    @media screen and (max-width:800px){
+        #banner{
+            padding-right: 100px;
+            width: 400px;
+        }
+        #banner_img{
+            height: 30px;
+        }
+    }
+
+    /* Media */
+#construct{
+    width: 100%;
+}
+
+</style>
+<body>
+    <nav id="nav">
+        <img id="logo" src="https://api.logo.com/api/v2/images?logo=logo_5a2054af-3662-47c7-ae7a-d78ed7eeb524&format=webp&margins=0&quality=60&width=500&background=transparent&u=1670993669" alt="Mailspatch_logo">
+
+<div id="nav2part">
+    <!--  -->
+    <div class="dropdown">
+        <button class="dropbtn">Email Testing &#709</button>
+        <div class="dropdown-content">
+            <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/qa_automation_icon_menu.svg" alt="logo">
+                <div id="first">
+                    <p class="bold">QA Automation</p>
+                    <p>Automation for Email Testing</p>
+                </div>
+                </a>
+                <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/check_html_icon_menu.svg" alt="logo">
+                    <div>
+                        <p class="bold">HTML Check</p>
+                        <p>Find HTML/CSS issues</p>
+                    </div>
+                    </a>
+                    <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/fake_smtp_server_icon_menu.svg" alt="logo">
+                        <div>
+                            <p class="bold">Fake SMTP Server</p>
+                            <p>Your own SMTP server</p>
+                        </div>
+                        </a>
+                        <a id="text" href="\construct.html"><img src="https://mailtrap.io/wp-content/uploads/2021/06/api_icon_menu.svg" alt="logo">
+                            <div id="last">
+                <p class="bold">Sandbox API</p>
+                <p>Integrate with your application</p>
+                            </div>
+                            </a>
+          </div>
+    </div>
+
+
+    <a class="page" href="\construct.html">Email API</a>
+    <a class="page" href="\construct.html">Pricing</a>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Resources &#709</i></button>
+        <div id="dropdowncontent2" class="dropdown-content">
+            <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-09.svg" alt="logo">
+                <div id="first">
+                    <p class="bold">API</p>
+                    <p>Integrate with existing resources</p>
+                </div>
+                </a>
+                <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-08.svg" alt="logo">
+                    <div>
+                        <p class="bold">Case Studies</p>
+                        <p>Success stories of our customers</p>
+                    </div>
+                    </a>
+                    <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/06/Transactional-Email-Sending_icon-07.svg" alt="logo">
+                        <div>
+                            <p class="bold">Blog</p>
+                            <p>The best content about emails</p>
+                        </div>
+                        </a>
+                        <a id="text" href="\construct.html"><img id="seconddropimg" src="https://mailtrap.io/wp-content/uploads/2022/03/Transactional-Email-Sending_icon-06.svg" alt="logo">
+                            <div id="last">
+                <p class="bold">Help</p>
+                <p>How-to's and Knowledge base</p>
+                            </div>
+                            </a>
+          </div>
+    </div>
+    <!--  -->
+    <div id="buttons">
+        <button id="whitebtn">
+            Log In
+        </button>
+        <button id="greenbtn">
+            Sign Up
+        </button>
+    </div>
+</div>
+        
+
+<!--  -->
+    </nav>
+    
+    <!-- body Section -->
+    
+    <img id="construct" src="https://dmcrf.com/wp-content/uploads/2020/02/page-under-construction-1.jpg" alt="image">
+
+    <!-- body Section End-->
+    
+    <!-- Footer Section Start -->
+    <div id="footerbanner">
+        <div id="click">
+            <h3>Create Your Free Account</h3>
+            <h1>In 3 Clicks</h1>
+            <button class="signup" id="greenbodybtnclick">
+                Sign Up Now
+            </button>
+        </div>
+        <div id="footerbannerimgDiv">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/01/img__cta.svg" alt="image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footer">
+        <div>
+            <img src="https://i.ibb.co/N7nSjk3/flogo.jpg" alt="footerimage">
+        </div>
+        <div>
+            <h3>Mailspatch</h3>
+            <a href="\construct.html">Pricing</a>
+            <a href="\construct.html">Changelog</a>
+            <a href="\construct.html">Status</a>
+            <a href="\construct.html">Terms of Service</a>
+            <a href="\construct.html">Privacy Policy</a>
+            <a href="\construct.html">Navigational Information</a>
+        </div>
+        <div>
+            <h3>Railsware Experience</h3>
+            <a href="\construct.html">Mailspatch Blog</a>
+            <a href="\construct.html">Coupler.io</a>
+            <a href="\construct.html">Smart Checklist for Jira</a>
+            <a href="\construct.html">Careers – Railsware Hiring</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <a href="www.gmail.com">email: support@mailspatch.io
+            </a>
+            <div>
+                <a href="https://www.facebook.com/">
+                    <img src="https://i.ibb.co/mrjfjgn/f.jpg" alt="icon">
+                </a>
+                <a href="https://twitter.com/home">
+                    <img src="https://i.ibb.co/MSMTPFC/T.jpg" alt="icon">
+                </a>
+                <a href="www.linkedin.com">
+                    <img src="https://i.ibb.co/64rkj44/in.jpg" alt="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- End of Footer -->
+</body>
+</html>
+<script src="\index.js"></script>
