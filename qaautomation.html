@@ -18,12 +18,8 @@
     p{
         margin: 5px;
     }
-    #lightbody{
-        background-color: #f8f3f3;
-        height: 2300px;
-    }
     body{
-        background-color: #f4eaea;
+        background-color: #f9f9f7;
         margin: 0%;
     }
     #logo{
@@ -151,24 +147,78 @@
     #greenbtn:hover{
         cursor: pointer;
     }    
-    #greenbodybtn,
-    #greenbodybtn2{
+
+    /* MAIN */
+    /* MAIN */
+    .heading{
+        font-size: 40px;
+    }
+
+    #power{
+        /* border: 5px solid yellow; */
+        /* margin-top: -325px; */
+        padding-top: 110px;
+        display: flex;
+        width: 1100px;
+        margin: auto;
+        height: 550px;
+        gap: 5%;
+    }
+
+    #power > div:nth-child(1){
+        width: 45%;
+        /* border: 5px solid red; */
+    }
+
+    #power > div:nth-child(2){
+        width: 50%;
+        /* border: 5px solid red; */
+    }
+
+
+    #powerText > p{
+        font-size: larger;
+    }
+
+    #greenbodybtn1{
         border: none;
         height: 40px;
         border-radius: 6px;
         padding-left: 20px;
         padding-right: 20px;
         display: block;
-        margin: auto;
         margin-top: 50px;
         color: white;
         background-color: #22d172;
         font-weight:500;
     }
-    #greenbodybtn,
-    #greenbodybtn2{
+
+    #greenbodybtn1{
         cursor: pointer;
     }
+    #greenbodybtn1:hover{
+        cursor: pointer;
+        background-color: #3fe78a;
+    }
+
+    #banner{
+        /* border: 5px solid yellow; */
+        width: 100%;
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #banner_img{
+        display: block;
+        /* height: 35px; */
+        width: 17%;
+    }
+
+    #powerImage > img{
+        width: 100%;
+    }
+
+    /* MAIN */
 
     /* Footer */
     #footerbanner{
@@ -271,6 +321,9 @@
         /* body{
             background-color: #22d172;
         } */
+        .heading{
+        font-size: 35px;
+    }
         #click{
             /* border: 5px solid yellow; */
             margin-top: -5px;
@@ -281,6 +334,9 @@
         /* body{
             background-color: #22d172;
         } */
+        .heading{
+        font-size: 35px;
+    }
         #click{
             /* border: 5px solid yellow; */
             margin-top: -5px;
@@ -288,6 +344,9 @@
         }
     }
     @media screen and (max-width:750px) and (min-width:570px){
+        .heading{
+        font-size: 35px;
+    }
         #nav2part{
             /* background-color: #87a8cb; */
             width: 450px;
@@ -320,6 +379,9 @@
     }
 
     @media screen and (max-width:569.9px){
+        .heading{
+        font-size: 35px;
+    }
         #nav2part{
             width: 250px;
             gap: 15px;
@@ -354,10 +416,153 @@
         }
     }
 
-    /* Media */
-#construct{
-    width: 100%;
-}
+    @media screen and (max-width:1200px) and (min-width:1000.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        .heading{
+        font-size: 35px;
+    }
+        #power{
+            width: 950px;
+        }
+        #powerImage > img{
+            position: relative;
+            margin-left: -75px;
+            width: 115%;
+        }
+    }
+
+    @media screen and (max-width:1000px) and (min-width:900.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        .heading{
+        font-size: 35px;
+    }
+        #power{
+            width: 825px;
+            height: 525px;
+        }
+        #powerImage > img{
+            position: relative;
+            margin-left: -75px;
+            width: 115%;
+        }
+    }
+
+    @media screen and (max-width:900px) and (min-width:700.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        .heading{
+        font-size: 35px;
+    }
+        #power{
+            width: 625px;
+            height: 675px;
+        }
+        #power > div:nth-child(2){
+            display: flex;
+            justify-content: end;
+        }
+        #powerImage > img{
+            position: relative;
+            margin-left: -75px;
+            width: 115%;
+        }
+        #banner{
+            margin-top: 125px;
+            width: 400px;
+        }
+    }
+
+    @media screen and (max-width:700px) and (min-width:570.1px){
+        /* body{
+            background-color: #22d172;
+        } */
+        .heading{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #power{
+        padding-top: 120px;
+        display: flex;
+        flex-direction: column;
+        width: 525px;
+        height: 900px;
+    }
+
+    #power > div:nth-child(1){
+        width: 100%;
+    }
+
+    #power > div:nth-child(2){
+        width: 100%;
+    }
+
+
+    #powerText > p{
+        text-align: center;
+    }
+
+    #greenbodybtn1{
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #banner{
+            margin: auto;
+            margin-top: 50px;
+            width: 400px;
+        }
+    }
+
+    @media screen and (max-width:570px){
+        /* body{
+            background-color: #22d172;
+        } */
+        .heading{
+            margin-top: 50px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #power{
+        flex-direction: column;
+        width: 400px;
+        height: 850px;
+    }
+
+    #power > div:nth-child(1){
+        width: 100%;
+    }
+
+    #power > div:nth-child(2){
+        width: 100%;
+    }
+
+
+    #powerText > p{
+        text-align: center;
+    }
+
+    #greenbodybtn1{
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #banner{
+        margin: auto;
+        margin-top: 50px;
+        width: 350px;
+        }
+    }
+
+/* ABOVE */
+    /* ABOVE */
+/* ABOVE */
 
 </style>
 <body>
@@ -447,7 +652,31 @@
     
     <!-- body Section -->
     
-    <img id="construct" src="https://dmcrf.com/wp-content/uploads/2020/02/page-under-construction-1.jpg" alt="image">
+    <!-- Power Section -->
+    <div id="power">
+        <!-- 1st Section -->
+        <div id="powerText">
+            <h1 class="heading">Powerful Automation For Testing Your Email Sequences</h1>
+            <p>Cover all your testing scenarios with Sandbox API.</p>
+            <button id="greenbodybtn1">
+                Sign Up For Free
+            </button> 
+            <!-- Banner -->
+            <div id="banner">
+                <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/06/Selenium-110x33.png" alt="banner">
+                <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/06/Cucumber.svg" alt="banner">
+                <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/06/Protractor.svg" alt="banner">
+                <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/06/Cypress.svg" alt="banner">
+                <img id="banner_img" src="https://mailtrap.io/wp-content/uploads/2021/06/Jmeter.svg" alt="banner">
+            </div>
+            <!-- Banner -->
+        </div>
+        <!-- 2nd Section -->
+        <div id="powerImage">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/05/img__qa.svg" alt="image">
+        </div>
+    </div>
+    <!-- Power Section Ends-->
 
     <!-- body Section End-->
     
@@ -508,4 +737,4 @@
 <!-- End of Footer -->
 </body>
 </html>
-<script src="\index.js"></script>
+<script src="\qaautomation.js"></script>
